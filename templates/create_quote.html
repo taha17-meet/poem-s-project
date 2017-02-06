@@ -1,0 +1,14 @@
+<html>
+
+
+<h1> New Quote </h1>
+<form action="{{ url_for('create_quote') }}" method = 'post'>
+
+ text:<br>
+  <input type="text" name="text"><br>
+ mood:<br>
+ 	<input type="text" name="mood"><br> 
+
+  <input type="submit" value="create quote ">
+</form>
+</html>

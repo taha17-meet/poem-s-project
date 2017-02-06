@@ -1,0 +1,16 @@
+<html>
+
+
+<h1> Edit Poem </h1>
+<form action="{{ url_for('editPoem', poem_id = poem.id) }}" method = 'post'>
+ Name:<br>
+  <input type="text" value = {{poem.name}} name="name"><br>
+ text:<br>
+ <textarea name="text">{{poem.text}}</textarea>
+  
+ mood:<br>
+ 	<input type="text" value = {{poem.topic}} name="mood"><br> 
+
+  <input type="submit" value="edit poem">
+</form>
+</html>

@@ -1,0 +1,15 @@
+<html>
+
+
+<h1> New Poem </h1>
+<form action="{{ url_for('create_poem') }}" method = 'post'>
+ Name:<br>
+  <input type="text" name="name"><br>
+ text:<br>
+  <input type="text" name="text"><br>
+ mood:<br>
+ 	<input type="text" name="mood"><br> 
+
+  <input type="submit" value="create poem">
+</form>
+</html>
