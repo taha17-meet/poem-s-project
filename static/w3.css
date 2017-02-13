@@ -1,0 +1,26 @@
+<!doctype>
+<html>
+<head>
+<style>
+#CloudDiv
+{
+
+	background-image: url('https://img.clipartfest.com/6531353e94a364ae3561820cdca7896a_clipart-grey-cloud-2-clipart-clouds_2400-1315.png');
+	    background-size:     contain;
+	    background-color:blue;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center; 
+	position:absolute;
+	width:500px;
+	height:500px;
+
+}
+
+#TextDiv{
+
+	position: absolute;
+	background-color: green;
+	width:300px;
+	height:150px;
+	left:25%;
+	top:25%;

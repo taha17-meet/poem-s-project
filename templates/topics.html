@@ -1,21 +1,29 @@
-<h1> poems title</h1>
+
+{% extends "layout.html" %}
+
+<div class="background1" >
+
+<ul id="navlist">
+  <li id="home"><a href="default.asp"></a></li>
+</ul>
 
 
-
-
- <html>
-
-
+{% block body %}
+<div id = "CloudContainer">
 {% for mood in topics%}
-
-<a href="{{ url_for('showByMood',mood=mood) }}"> {{ mood }} </a>
+<div class = "CloudDiv">
+<span class = "CloudText"> <a href="{{ url_for('showByMood',mood=mood) }}"> {{ mood }} </a></span>
 </br> 
 
+</div>
 {% endfor %}
+</div>
+{%endblock%}
 
 
- </html>
 
+
+ 
 
 
 

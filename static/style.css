@@ -1,0 +1,44 @@
+
+.CloudDiv{
+
+	background-image: url('https://img.clipartfest.com/6531353e94a364ae3561820cdca7896a_clipart-grey-cloud-2-clipart-clouds_2400-1315.png');
+	background-size: contain;                    
+    background-repeat: no-repeat;
+    background-position: center; 
+	position:absolute;
+	width:150px;
+	height:150px;
+	text-align: center;
+
+}
+
+.CloudText  { position: relative;
+	top:45%;
+	left:5%;
+	
+}
+
+#background1{
+	background-image:url("http://htmlcolorcodes.com/assets/images/html-color-codes-color-tutorials-hero-00e10b1f.jpg");
+
+}
+
+.TextDiv{
+
+	position: absolute;
+	background-color: green;
+	width:300px;
+	height:150px;
+	left:25%;
+	top:40%;
+}
+
+
+html { 
+  background: url("http://belindaotas.com/wp-content/uploads/book-and-background.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+

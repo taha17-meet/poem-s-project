@@ -1,0 +1,16 @@
+<!doctype html>
+<head>
+<title>Taha's website</title>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+	<body>
+<h2>{% block title %}Poetry with Taha{% endblock %}</h2>
+
+{% for message in get_flashed_messages() %}
+	<div class=flash>{{ message }}</div>
+	{% endfor %}
+
+	{% block body %}{% endblock %}
+	</body>
+</html>
