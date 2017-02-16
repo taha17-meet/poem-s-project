@@ -1,4 +1,12 @@
+{% extends "layout.html" %}
+
+{%block title%}  {%endblock%}
+
+{% block body %}
+
 
 <h1><a href = '{{url_for("showPoemsByMood", mood = mood) }}'> POEMS </a></h1>
 
 <h2><a href = '{{url_for("showQuotesByMood", mood = mood) }}'> QUOTES </a></h1>
+
+{%endblock%}
