@@ -1,3 +1,4 @@
+#-*-coding: utf-8-*-
 from databases import *
 engine = create_engine('sqlite:///poems.db')
 Base.metadata.bind= engine
@@ -8,11 +9,165 @@ session = DBSession()
 
 
 ### Initialize database with entries ###
-quote1=Quote(text= ''' i am in love ''',topic = '''romantic''')
-session.add(quote1)
-session.commit()
+if session.query(Quote).filter_by(text =''' - And in her smile I see something more beautiful than the stars''' ).all() == []:
+    quote1=Quote(text= ''' - And in her smile I see something more beautiful than the stars''',topic = '''romantic''' )
+    session.add(quote1)
+    session.commit()
+if session.query(Quote).filter_by(text =''' - It is one thing to fall in love. It is another to feel someone else fall in love with you, and to feel a responsibility toward that love''' ).all() == []:
+    quote2=Quote(text= ''' - It is one thing to fall in love. It is another to feel someone else fall in love with you, and to feel a responsibility toward that love''',topic = '''romantic''')
+    session.add(quote2)
+    session.commit()    
+if session.query(Quote).filter_by(text =''' - I love you the way a drowning man loves air. And it would destroy me to have you just a little''' ).all() == []:
+    quote3=Quote(text= ''' - I love you the way a drowning man loves air. And it would destroy me to have you just a little''',topic = '''romantic''')
+    session.add(quote3)
+    session.commit()    
+
+if session.query(Quote).filter_by(text = ''' - I never loved you any more than I do, right this second. And I will never love you any less than I do, right this second''' ).all() == []:
+    quote4=Quote(text= ''' - I never loved you any more than I do, right this second. And I will never love you any less than I do, right this second''',topic = '''romantic''')
+    session.add(quote4)
+    session.commit()    
+if session.query(Quote).filter_by(text = ''' - But you have slipped under my skin, invaded my blood and seized my heart''' ).all() == []:
+    quote5=Quote(text= ''' - But you have slipped under my skin, invaded my blood and seized my heart''',topic = '''romantic''')
+    session.add(quote5)
+    session.commit()    
+
+
+if session.query(Quote).filter_by(text = ''' - And I have realized that the Beatles got it wrong. Love is not all we need ,love is all there is''' ).all() == []:
+    quote6=Quote(text= ''' - And I have realized that the Beatles got it wrong. Love is not all we need ,love is all there is''',topic = '''romantic''')
+    session.add(quote6)
+    session.commit()    
+if session.query(Quote).filter_by(text = ''' - No matter where I went, I always knew my way back to you , You are my compass star''' ).all() == []:
+    quote7=Quote(text=''' - No matter where I went, I always knew my way back to you,You are my compass star''',topic ='''romantic''')
+    session.add(quote7)
+    session.commit()    
+if session.query(Quote).filter_by(text = ''' - When I tell you I love you, I am not saying it out of habit, I am reminding you that you are my life''' ).all() == []:
+    quote8=Quote(text= ''' - When I tell you I love you, I am not saying it out of habit, I am reminding you that you are my life''',topic = '''romantic''')
+    session.add(quote8)
+    session.commit()    
+if session.query(Quote).filter_by(text = ''' - I do mot need paradise because I found you. I do not need dreams because I already have you''' ).all() == []:
+    quote9=Quote(text= ''' - I do not need paradise because I found you. I do not need dreams because I already have you''',topic = '''romantic''')
+    session.add(quote9)
+    session.commit()    
+if session.query(Quote).filter_by(text = ''' - You are the last thought in my mind before I drift off to sleep and the first thought when I wake up each morning''' ).all() == []:
+    quote10=Quote(text= ''' - You are the last thought in my mind before I drift off to sleep and the first thought when I wake up each morning ''',topic = '''romantic''')
+    session.add(quote10)
+    session.commit()    
+if session.query(Quote).filter_by(text = ''' - Love is not about how many days, weeks or months you have been together, it is all about how much you love each other every day''' ).all() == []:
+    quote11=Quote(text= ''' - Love is not about how many days, weeks or months you have been together, it is all about how much you love each other every day''',topic = '''romantic''')
+    session.add(quote11)
+    session.commit()    
+if session.query(Quote).filter_by(text = ''' - If I know what love is, it is because of you''' ).all() == []:
+    quote12=Quote(text= ''' - If I know what love is, it is because of you''',topic = '''romantic''')
+    session.add(quote12)
+    session.commit()    
+if session.query(Quote).filter_by(text = ''' - You are my paradise and I would happily get stranded on you for a lifetime''' ).all() == []:
+    quote13=Quote(text= ''' - You are my paradise and I would happily get stranded on you for a lifetime''',topic = '''romantic''')
+    session.add(quote13)
+    session.commit()   
+if session.query(Quote).filter_by(text = ''' - I am so totally, completely, overwhelmingly, eye-poppingly, life-changingly, spectacularly, passionately, deliciously in love with you''' ).all() == []:
+    quote14=Quote(text= ''' - I am so totally, completely, overwhelmingly, eye-poppingly, life-changingly, spectacularly, passionately, deliciously in love with you''',topic = '''romantic''')
+    session.add(quote14)
+    session.commit()    
+if session.query(Quote).filter_by(text = ''' - God is keeping me alive but you are keeping me in love''' ).all() == []:
+    quote15=Quote(text= ''' - God is keeping me alive but you are keeping me in love''',topic = '''romantic''')
+    session.add(quote15)
+    session.commit()    
+if session.query(Quote).filter_by(text = ''' - My angel, my life, my entire world, you are the one that I want, the one that I need, let me be with you always, my love, my everything''' ).all() == []:
+    quote16=Quote(text= ''' - My angel, my life, my entire world, you are the one that I want, the one that I need, let me be with you always, my love, my everything''',topic = '''romantic''')
+    session.add(quote16)
+    session.commit()    
+
+if session.query(Quote).filter_by(text = ''' - When I despair, I remember that all through history the way of truth and love have always won. There have been tyrants and murderers, and for a time, they can seem invincible, but in the end, they always fall. Think of it--always.''' ).all() == []:
+    quote32=Quote(text= ''' - When I despair, I remember that all through history the way of truth and love have always won. There have been tyrants and murderers, and for a time, they can seem invincible, but in the end, they always fall. Think of it--always.''',topic = '''sad''')
+    session.add(quote32)
+    session.commit()
+if session.query(Quote).filter_by(text = ''' - Every man has his secret sorrows which the world knows not; and often times we call a man cold when he is only sad''' ).all() == []:
+    quote33=Quote(text= ''' - Every man has his secret sorrows which the world knows not; and often times we call a man cold when he is only sad''',topic = '''sad''')
+    session.add(quote33)
+    session.commit()
+if session.query(Quote).filter_by(text = ''' - I didn't want to wake up. I was having a much better time asleep. And that is really sad. It was almost like a reverse nightmare, like when you wake up from a nightmare you are so relieved. I woke up into a nightmare.''' ).all() == []:
+    quote34=Quote(text= ''' - I didn't want to wake up. I was having a much better time asleep. And that is really sad. It was almost like a reverse nightmare, like when you wake up from a nightmare you are so relieved. I woke up into a nightmare.''',topic = '''sad''')
+    session.add(quote34)
+    session.commit()
+if session.query(Quote).filter_by(text = ''' - What you must understand about me is that I am a deeply unhappy person.''' ).all() == []:
+    quote35=Quote(text= ''' - What you must understand about me is that I am a deeply unhappy person.''',topic = '''sad''')
+    session.add(quote35)
+    session.commit()
+if session.query(Quote).filter_by(text = ''' - Do not trust too much, do not love too much, do not care too much because that too much will hurt you so much!''' ).all() == []:
+    quote19=Quote(text= ''' - Do not trust too much, do not love too much, do not care too much because that too much will hurt you so much!''',topic = '''sad''')
+    session.add(quote19)
+    session.commit()
+if session.query(Quote).filter_by(text = ''' - What do you do when the only one who can make you stop crying is the one who made you cry?''' ).all() == []:
+    quote20=Quote(text= ''' - What do you do when the only one who can make you stop crying is the one who made you cry?''',topic = '''sad''')
+    session.add(quote20)
+    session.commit()
+if session.query(Quote).filter_by(text = ''' - When you are happy, you enjoy the music. But, when you are sad you understand the lyrics.''' ).all() == []:
+    quote21=Quote(text= ''' - When you are happy, you enjoy the music. But, when you are sad you understand the lyrics.''',topic = '''sad''')
+    session.add(quote21)
+    session.commit()
+if session.query(Quote).filter_by(text = ''' - Usually, people think that I am a strong, happy person..but behind my smiles they just do not know how much I am in pain and almost broken..''' ).all() == []:
+    quote22=Quote(text= ''' - Usually, people think that I am a strong, happy person..but behind my smiles they just do not know how much I am in pain and almost broken..''',topic = '''sad''')
+    session.add(quote22)
+    session.commit()
+if session.query(Quote).filter_by(text = ''' - It is sad when you realize you are not as important to someone as you thought you were.''' ).all() == []:
+    quote23=Quote(text= ''' - It is sad when you realize you are not as important to someone as you thought you were.''',topic = '''sad''')
+    session.add(quote23)
+    session.commit()
+if session.query(Quote).filter_by(text = ''' - Behind my smile is a hurting heart, behind my laugh I am falling apart , Look closely at me and you will see, the girl I am, it is not me''' ).all() == []:
+    quote24=Quote(text= ''' - Behind my smile is a hurting heart, behind my laugh I am falling apart , Look closely at me and you will see, the girl I am, it is not m''',topic = '''sad''')
+    session.add(quote24)
+    session.commit()
+if session.query(Quote).filter_by(text = ''' - Nothings worse, is to see them two together, knowing I will never have him again.''' ).all() == []:
+    quote28=Quote(text= ''' - Nothings worse, is to see them two together, knowing I will never have him again.''',topic = '''sad''')
+    session.add(quote28)
+    session.commit()
+if session.query(Quote).filter_by(text = ''' - At some point, you have to realize that some people can stay in your heart but not in your life.''' ).all() == []:
+    quote29=Quote(text= ''' - At some point, you have to realize that some people can stay in your heart but not in your life.''',topic = '''sad''')
+    session.add(quote29)
+    session.commit()
+if session.query(Quote).filter_by(text = ''' - I am afraid of being forgotten. Because it seems everyone I get close to, ends up forgetting me.''' ).all() == []:
+    quote30=Quote(text= ''' - I am afraid of being forgotten. Because it seems everyone I get close to, ends up forgetting me.''',topic = '''sad''')
+    session.add(quote30)
+    session.commit()
+if session.query(Quote).filter_by(text = ''' - I am sick of making things worse, I am sick of being hurt. I am sick of crying myself to sleep. I am sick of hating everything. I am sick of faking a smile. I am sick of feeling this way. I am sick of letting people down. I am sick of being me.''' ).all() == []:
+    quote31=Quote(text= ''' - I am sick of making things worse, I am sick of being hurt. I am sick of crying myself to sleep. I am sick of hating everything. I am sick of faking a smile. I am sick of feeling this way. I am sick of letting people down. I am sick of being me.''',topic = '''sad''')
+    session.add(quote31)
+    session.commit()
+if session.query(Quote).filter_by(text = ''' - A thousand words could not bring you back , I know this because I tried, neither could a thousand tear,,  I know this because I cried, you left behind a broken heart and happy memories too , but I never wanted memories ,, I only wanted you''').all() == []:
+    quote17=Quote(text= ''' - A thousand words could not bring you back , I know this because I tried, neither could a thousand tear,, I know this because I cried, you left behind a broken heart and happy memories too , but I never wanted memories ,, I only wanted you''',topic = '''sad''')
+    session.add(quote17)                
+    session.commit()
+if session.query(Quote).filter_by(text = ''' - Do not trust too much, do not love too much, do not care too much because that too much will hurt you so much!''' ).all() == []:
+    quote19=Quote(text= ''' - Do not trust too much, do not love too much, do not care too much because that too much will hurt you so much!''',topic = '''sad''')
+    session.add(quote19)
+    session.commit()
+if session.query(Quote).filter_by(text = ''' - What do you do when the only one who can make you stop crying is the one who made you cry?''' ).all() == []:
+    quote20=Quote(text= ''' - What do you do when the only one who can make you stop crying is the one who made you cry?''',topic = '''sad''')
+    session.add(quote20)
+    session.commit()
+if session.query(Quote).filter_by(text = ''' - When you are happy, you enjoy the music. But, when you are sad you understand the lyrics.''' ).all() == []:
+    quote21=Quote(text= ''' - When you are happy, you enjoy the music. But, when you are sad you understand the lyrics.''',topic = '''sad''')
+    session.add(quote21)
+    session.commit()
+if session.query(Quote).filter_by(text = ''' - Usually, people think that I am a strong, happy person..but behind my smiles they just do not know how much I am in pain and almost broken..''' ).all() == []:
+    quote22=Quote(text= ''' - Usually, people think that I am a strong, happy person..but behind my smiles they just do not know how much I am in pain and almost broken..''',topic = '''sad''')
+    session.add(quote22)
+    session.commit()
+if session.query(Quote).filter_by(text = ''' - It is sad when you realize you are not as important to someone as you thought you were.''' ).all() == []:
+    quote23=Quote(text= ''' - It is sad when you realize you are not as important to someone as you thought you were.''',topic = '''sad''')
+    session.add(quote23)
+    session.commit()
+
+if session.query(Quote).filter_by(text = ''' - Sometimes, crying is the only way your eyes speak when your mouth can not explain how broken your heart is.''' ).all() == []:
+    quote25=Quote(text= ''' - Sometimes, crying is the only way your eyes speak when your mouth can not explain how broken your heart is.''',topic = '''sad''')
+    session.add(quote25)
+    session.commit()
+if session.query(Quote).filter_by(text = ''' - The ones that you love the most are usually the ones that hurt you the most! <<- That is true.''' ).all() == []:
+    quote26=Quote(text= ''' - The ones that you love the most are usually the ones that hurt you the most! <<- That is true.''',topic = '''sad''')
+    session.add(quote26)
+    session.commit()
 if session.query(Poem).filter_by(name = '''You're My Everything''' ).all() == []:
-    poemA1 = Poem(name='''You're My Everything''',background = '''http://www.hdbloggers.net/wp-content/uploads/2016/09/Field-of-Flowers-8.jpg`  ''', text = '''It makes me happy just being by your side
+    poemA1 = Poem(name='''You're My Everything''',background = '''https://i.ytimg.com/vi/elNCDGKrLEg/maxresdefault.jpg  ''', text = '''It makes me happy just being by your side
 
     All these feelings I just cant hide
 
@@ -44,7 +199,7 @@ if session.query(Poem).filter_by(name = '''You're My Everything''' ).all() == []
 
 
 if session.query(Poem).filter_by(name = '''You Mean The World To Me''' ).all() == []:   
-    poemA2 = Poem(name='''You Mean The World To Me''', text = ''' You mean the world to me
+    poemA2 = Poem(name='''You Mean The World To Me''', text = ''' 
     Nothing will ever come between us
     No matter what anybody says or does
     You will always be in my heart
@@ -57,27 +212,11 @@ if session.query(Poem).filter_by(name = '''You Mean The World To Me''' ).all() =
     Things will be ok
     Like I said I will love you forever
     No matter what
-     ''', background= "https://cdn.pixabay.com/photo/2015/06/17/17/20/rose-812765_1280.jpg" , topic= '''romantic''')
+     ''', background= "http://4.bp.blogspot.com/-3VvhZLMzwPs/VqCl5l0GtlI/AAAAAAAABLY/I2eJSEDvO5Y/s1600/Romantic-Status-in-English-for-WhatsApp-%2526-Facebook-01.jpg" , topic= '''romantic''')
     session.add(poemA2)
     session.commit()
 
-if session.query(Poem).filter_by(name = '''You Mean The World To Me''' ).all() == []:   
-    poemA2 = Poem(name='''You Mean The World To Me''', text = ''' You mean the world to me
-    Nothing will ever come between us
-    No matter what anybody says or does
-    You will always be in my heart
-    Forever and ever
-    Your spot will never be replaced
-    You hold the key to my heart
-    And you have since we met
-    I will love you forever
-    And no matter how much we fight
-    Things will be ok
-    Like I said I will love you forever
-    No matter what
-     ''', background= "https://cdn.pixabay.com/photo/2015/06/17/17/20/rose-812765_1280.jpg" , topic= '''romantic''')
-    session.add(poemA2)
-    session.commit()
+
 
 if session.query(Poem).filter_by(name = '''My Promise To You''' ).all() == []:  
     poemA3 = Poem(name='''My Promise To You''', text = ''' I promise to always lift you up
@@ -126,7 +265,7 @@ And baby I promise that I will always love you more than anything with all my he
 Ill be your guardian angel
 That's my promise to you!!
 
-     ''', background = "http://4.bp.blogspot.com/-TvMlyPzGQxs/VqCmDCI-jHI/AAAAAAAABLg/deSosVJdG7g/s1600/Romantic-Status-in-English-for-WhatsApp-%2526-Facebook-02.jpg", topic= '''romantic''')
+     ''', background = "http://images.r.cruisecritic.com/features/generic-stock/romantic-cruising1.jpg", topic= '''romantic''')
     session.add(poemA3)
     session.commit()
 if session.query(Poem).filter_by(name = '''Life Moves Way Too Fast''' ).all() == []:    
@@ -141,7 +280,7 @@ With every day I know I'm blessed that you're a part of me
 Now let's just try to slow it down and savor all that's past
 For that's what molds our future, and life moves way too fast
 
-     ''', topic= '''romantic''')
+     ''',background = "http://3.bp.blogspot.com/-twgfV7fsJco/T8aA8RdBVsI/AAAAAAAAAms/eBNWOodpS1s/s1600/couple+love+quotes+(1).jpg", topic= '''romantic''')
     session.add(poem10)
     session.commit()
 
@@ -166,11 +305,146 @@ Still my feelings are the same today,
 As they were on that very first,
 For when we touch, my heart still flies, on gossamer wings through cloudless skies.
 
-     ''', topic= '''romantic''')
+     ''',background= "https://thumbs.dreamstime.com/t/silhouette-hand-heart-shape-sunset-37378815.jpg", topic= '''romantic''')
     session.add(poem11)
     session.commit()
     
+if session.query(Poem).filter_by(name = '''true love''' ).all() == []:    
+    poem111 = Poem(name='''true love  ''', text = ''' There are not enough words, to describe the effect u have on me...
+You make it easy to be myself, and its you who set me free...
+You are just so amazing, I can't believe how good you make me feel...
+I was scared this was only just a dream, but you assured me this was real...
+When you told me how you really felt, i had difficulty trying to breathe...
+My heart began to beat much faster, but you promised me you wouldn't leave...
+Every word that you wrote, made me want to be with you so much more...
+The thought of you had me trembling, deep down inside my core...
+I long to b with u boo, like we envisioned for our first meet...
+The thought of my arms around you, with your hand in mine is just so sweet...
+Watching the beautiful Cali sunset, and a breeze that is so gentle...
+We connect on many levels boo, not yet of the physical, but the mental...
+But soon enough you'll be in my arms, falling fast asleep...
+I said no harm would come your way, and a promise i always keep...
+You're safe with me at all times boo, id never do you wrong...
+We've talked about what does not kill you only makes you strong...
+You're open and you're willing, to tell me how you truly feel...
+You're beautiful, and you care for me, i can hardly believe you're real...
+But the day will come when i look into your eyes, and see what you r made of...
+And when I realize where your heart lies, I'll know your my true love!
 
+     ''',background = "https://s-media-cache-ak0.pinimg.com/originals/7c/b8/74/7cb87401fd21a5288770a54fdf6265f3.jpg" , topic= '''romantic''')
+    session.add(poem111)
+    session.commit()
+    
+if session.query(Poem).filter_by(name = '''Open my heart''' ).all() == []:    
+    poem115 = Poem(name=''' Open my heart''', text = ''' Open my heart,
+seeing that you already have the key,
+Open my heart to meet with the pleasure of your life,
+Open my heart,
+So far you will find your heart desire,
+Open my heart to come accross your life wonders,
+Open my heart,
+To determine that it was for good,
+Open my heart,
+To get to know utterly its aspiration,
+Open my heart,
+In order to find what i devoted for you,
+Open my heart,
+That's the only way to verify the truth,
+Open my heart,
+To find no difficulty to trust me,
+Open my heart,
+This where resides the true love,
+Open my heart,
+I'm so exhausted to give evidence of love,
+Open my heart,
+I can't resist no more, even for a second,
+Open my heart.
+...and that would be a passionate triumph!
+
+
+     ''',background = "http://www.love.quotesms.com/images/love-wallpaper/Best-Love-Wallpaper-for-Desktop.jpg" , topic= '''romantic''')
+    session.add(poem115)
+    session.commit()    
+if session.query(Poem).filter_by(name = '''
+In quest of love''' ).all() == []:    
+    poem114 = Poem(name='''
+In quest of love ''', text = '''I slide along the edge of the stream,
+Crossing the narrow road leading to it,
+Search in the depth of the fussed ocean,
+To find the portion reserved for me!
+
+I wander throughout the universe,
+Tracking the silvery, sparkled stars.
+Conspicuously, I've was so exhausted,
+My naive heart chose not to surrender!
+
+I interrogate the reflective cloud,
+It points me to the house of obscurity,
+I hasten to go to the peaceful spot,
+There was not even the shadow of it!
+
+I had even walked out of boundaries,
+To know whether which direction it took,
+I crapped out and fell on the wrong road.
+However, I was hopeful and undismayed!
+
+Lastly, a quiescent mind appealing me,
+Thus, my heart plunges under the ocean,
+To strike the accuracy of the true love.
+Meanwhile, I hope that it will discern it!
+ 
+
+     ''',background = "http://pojemario.com/wp/wp-content/uploads/2010/01/lostLove_tn.jpg" , topic= '''romantic''')
+    session.add(poem114)
+    session.commit()    
+if session.query(Poem).filter_by(name = '''My love is true''' ).all() == []:    
+    poem113 = Poem(name=''' My love is true''', text = ''' Of all the guys Ive ever met
+You're the one i cant forget
+
+If i should die before i wake
+Ill wait for you at the golden gate
+
+If you're not there by judgment day
+ill know u went the other way
+
+Ill give the angels back their wings and golden harps and everything
+
+And just to prove, my love is true
+Id go through hell to be with you
+
+
+     ''',background = "https://thumbs.dreamstime.com/z/couple-lovers-love-park-river-hug-21895476.jpg" , topic= '''romantic''')
+    session.add(poem113)
+    session.commit()    
+if session.query(Poem).filter_by(name = '''Because of you''' ).all() == []:    
+    poem112 = Poem(name=''' Because of you''', text = ''' I mistook by trying to ameliorate,
+I tried to listen to you the best I can.
+As for school, sometime I ran late,
+Just by attempting to be your last man.
+
+I ran out of time when we're talking.
+I can't discern mentally days & nights.
+I think more than twice before acting,
+Just to avoid depressions and fights.
+
+I rarely interact with my best friend,
+Just to win nothing, but your faithfulness,
+And not to bring about a tragic end
+To our relationship in good success.
+
+I am an ardent admirer,
+Who's trying to get you attention,
+And, often, a good inqirer,
+Who's trying to get a special mention.
+
+I knew, I disobeyed sometime,
+Not to loose you, but to keep you.
+I'm proud of the fact I've done no crime
+And I've done all of them because of you!
+
+     ''',background = "https://lh3.googleusercontent.com/-njxXbcQPx-s/V5KiLvHJY1I/AAAAAAAAg28/8aAaxQKq1zAB1fGV6biVH8Ob5OnENJIow/w800-h800/love-sms-for-boyfriend.jpg" , topic= '''romantic''')
+    session.add(poem112)
+    session.commit()    
 if session.query(Poem).filter_by(name = '''My Sanctuary''' ).all() == []:   
     poem13 = Poem(name='''My Sanctuary''', text = ''' In your arms
 
@@ -215,7 +489,7 @@ That balances your long lean face
 Just right
 
 
-     ''', topic= '''romantic''')
+     ''',background = "http://www.love.quotesms.com/images/love-images/Cute-Love-Images.jpg" ,topic= '''romantic''')
     session.add(poem13)
     session.commit()
     
@@ -248,7 +522,7 @@ I miss you with all of my heart,
 I wish we never had to part.
 I know you're always by my side,
 So now I guess this is my goodbye... 
-     ''', topic= '''sad''')
+     ''',background = "http://cdn.chobirdokan.com/wp-content/uploads/sad-boys-images.jpg", topic= '''sad''')
     session.add(poem14)
     session.commit()        
 
@@ -268,7 +542,7 @@ With which we'll never part.
 God has you in his keeping.
 We have you in our heart.
 -loosing-a-father 
-     ''', topic= '''sad''')
+     ''',background ="http://kertasonline.com/wp-content/uploads/2016/10/tumblr_njft1lXHB61tr0o2xo1_500.jpg" ,topic= '''sad''')
     session.add(poem15)
     session.commit()        
 
@@ -290,7 +564,7 @@ When my time comes......
 I will meet you in heaven!
 WE LOVE AND MISS YOU!
 
-     ''', topic= '''sad''')
+     ''',background = "http://1.bp.blogspot.com/-jTBLDFgNNHw/UOvgiQzcLkI/AAAAAAAAKa0/Uq8EY2kma3c/s1600/alone-emo-boy-cute-sad.jpg" ,topic= '''sad''')
     session.add(poem15)
     session.commit()        
                 
@@ -325,7 +599,7 @@ Rhonda Trish
 And Ashley
 I love you all
 
-     ''', topic= '''sad''')
+     ''',background = "http://2.bp.blogspot.com/-iOqqOH8pQaY/UcV3ReQe0RI/AAAAAAAAApk/M4thOtoYGc0/s1600/alone+boy+in+road+waiting+for+girlfrienf+gf+sad+alone+boy.jpg" ,topic= '''sad''')
     session.add(poem16)
     session.commit()        
                 
@@ -376,7 +650,7 @@ I'm simply asking you to help him fight
 Signed: daddy's little girl!
 
 Source: http://www.familyfriendpoems.com/poem/god-can-you-hear-me 
-     ''', topic= '''sad''')
+     ''',background = "http://s12.favim.com/mini/160320/boy-rain-raining-sad-Favim.com-4097892.jpg", topic= '''sad''')
     session.add(poem17)
     session.commit()        
                 
@@ -405,7 +679,7 @@ It's still here,
 Here with the fear,
 Fear that I will get hurt more.
 
-     ''', topic= '''sad''')
+     ''',background = "https://s-media-cache-ak0.pinimg.com/736x/7f/f4/c0/7ff4c03e46ff8106a3402e6379eeeed8.jpg" , topic= '''sad''')
     session.add(poem18)
     session.commit()        
                 
@@ -525,7 +799,7 @@ out
 
 My fears...are these..
 
-     ''', topic= '''sad''')
+     ''',background =  "https://s-media-cache-ak0.pinimg.com/736x/7f/f4/c0/7ff4c03e46ff8106a3402e6379eeeed8.jpg" , topic= '''sad''')
     session.add(poem19)
     session.commit()        
 
@@ -541,7 +815,7 @@ Surrounded by so much beauty?
 How could I be me,
 When even I remain a mystery?
 
-     ''', topic= '''sad''')
+     ''',background = "http://1.bp.blogspot.com/-AIUbRq1mHeU/TnA84vYIk4I/AAAAAAAAAmM/_L-vy1q3jOg/s1600/alone+in+the+world.jpg" , topic= '''sad''')
     session.add(poem20) 
     session.commit()        
 
@@ -567,7 +841,7 @@ He needs to prove his love to me.
 As I return to sit alone in the darkness...
 Waiting.
 
-     ''', topic= '''sad''')
+     ''',background= "http://68.media.tumblr.com/d23952b15155950da2a274ed8386d40a/tumblr_nvd0sbsYlB1uoi5gio6_500.jpg", topic= '''sad''')
 
     session.add(poem21)
     session.commit()        
@@ -591,7 +865,7 @@ Will they ever?
 
 
 
-     ''', topic= '''sad''')
+     ''',background ="https://juiceandgin.files.wordpress.com/2015/02/hd-photography-rain-love-15.jpg"  ,topic= '''sad''')
     session.add(poem22)
     session.commit()        
 
@@ -633,7 +907,7 @@ wait - And be patient.
 wait...
 for you.
 
-     ''', topic= '''sad''')
+     ''',background = "http://www.chainimage.com/images/photos-of-rainy-day-feel-free-love-images-blog.jpg" ,topic= '''sad''')
     session.add(poem23)
     session.commit()        
 
@@ -724,7 +998,7 @@ and tuck behind the crepe pillow,
 just before they close her casket.
 
 
-     ''', topic= '''sad''')
+     ''',background = "http://4.bp.blogspot.com/-yg9ncI69p-c/UZ5KNMxQcfI/AAAAAAAAAbA/w7pJSOBqXW0/s400/boy+in+dark+alone+boy.jpg", topic= '''sad''')
     session.add(poem24)
     session.commit()        
 
@@ -744,7 +1018,7 @@ If you don't stop drinking that is what you will lose.
 After all these years there is one thing I now know.
 If I love you this much it time to let go
 
-     ''', topic= '''sad''')
+     ''',background = "http://4.bp.blogspot.com/-M-m0b3P9VUs/Uz9rBYWT0ZI/AAAAAAAAAZI/szuO8pN_59E/s1600/crying-alone-sad-boy-wallpaper.jpg", topic= '''sad''')
     session.add(poem25)                 
     session.commit()        
 
@@ -767,7 +1041,7 @@ Is forgotten, never brought up again,
 No longer does anything matter,
 Its all darkness,
 Like a plague that never goes away.
-     ''', topic= '''sad''')
+     ''',background = "http://s5.favim.com/orig/140927/alone-black-and-white-girl-hipster-Favim.com-2103185.jpg" ,topic= '''sad''')
     session.add(poem26)
     session.commit()        
 
@@ -802,7 +1076,7 @@ turning to dust,
 my bed surrounding
 nothing but rust.
 
-     ''', topic= '''sad''')
+     ''',background = "http://favim.com/orig/201107/18/boy-girl-montain-sad-sadness-suicide-Favim.com-109689.jpg", topic= '''sad''')
     session.add(poem27)
     session.commit()    
     session.commit()
